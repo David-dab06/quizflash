@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Teste ta culture générale avec QuizFlash : des questions rapides, des points et des défis à chaque partie.">
+  <meta name="theme-color" content="#10172a">
+  <title>QuizFlash — Le défi culture générale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="QuizFlash accueil"><span class="brand-icon">Q</span> QuizFlash</a>
+    <span class="tag">LE DÉFI DU JOUR</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero" id="home">
+      <div class="eyebrow"><span class="dot"></span> PRÊT À RELEVER LE DÉFI ?</div>
+      <h1>Teste tes connaissances.<br><span>Brille à chaque réponse.</span></h1>
+      <p class="intro">Des questions de culture générale, un chrono et des points à gagner. Jusqu'où peux-tu aller ?</p>
+      <div class="stats">
+        <div><strong>10</strong><small>QUESTIONS</small></div>
+        <div><strong>15 s</strong><small>PAR QUESTION</small></div>
+        <div><strong>4</strong><small>CHOIX</small></div>
+      </div>
+      <button id="startBtn" class="primary">Commencer le quiz <span>→</span></button>
+      <p class="tiny">Gratuit · Sans inscription · Compatible téléphone</p>
+    </section>
+
+    <section class="game hidden" id="game" aria-live="polite">
+      <div class="game-head">
+        <span id="questionCount">QUESTION 1 / 10</span>
+        <span class="score">★ <b id="score">0</b> pts</span>
+      </div>
+      <div class="progress"><div id="progressFill"></div></div>
+      <div class="timer-row"><span>Temps restant</span><strong id="timer">15</strong></div>
+      <h2 id="question">Question</h2>
+      <div id="answers" class="answers"></div>
+      <p id="feedback" class="feedback" role="status"></p>
+      <button id="nextBtn" class="primary hidden">Question suivante <span>→</span></button>
+    </section>
+
+    <section class="result hidden" id="result">
+      <div class="trophy">🏆</div>
+      <p class="eyebrow">PARTIE TERMINÉE</p>
+      <h2 id="resultTitle">Bien joué !</h2>
+      <p class="result-score"><strong id="finalScore">0</strong><span> / 100 points</span></p>
+      <p id="resultMessage"></p>
+      <div class="result-actions">
+        <button id="replayBtn" class="primary">Rejouer ↻</button>
+        <button id="shareBtn" class="secondary">Partager mon score</button>
+      </div>
+      <p class="tiny">Ton meilleur score sur cet appareil : <b id="bestScore">0</b> pts</p>
+    </section>
+
+    <!-- Espace publicitaire : ajoutez le code AdSense uniquement après approbation du site. -->
+    <aside class="ad-slot" aria-label="Espace publicitaire">
+      <span>ESPACE PUBLICITAIRE</span>
+      <small>Les annonces pourront apparaître ici après validation AdSense.</small>
+    </aside>
+
+    <section class="about">
+      <h3>À propos de QuizFlash</h3>
+      <p>QuizFlash est un petit jeu indépendant de culture générale. Réponds aux questions, découvre ton score et recommence pour progresser. Les questions sont proposées à titre ludique et éducatif.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> QuizFlash</span>
+    <nav><a href="privacy.html">Confidentialité</a><a href="mailto:contact@example.com">Contact</a></nav>
+  </footer>
+  <script src="game.js"></script>
+</body>
+</html>
