@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b2e">
+  <title>Football Quiz | QuizFlash</title>
+  <link rel="stylesheet" href="football.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="back" href="index.html">← QuizFlash</a>
+    <span class="brand">QUIZ<span>FLASH</span></span>
+  </header>
+  <main class="shell">
+    <section id="home" class="panel hero">
+      <div class="ball">⚽</div>
+      <p class="eyebrow">LE GRAND QUIZ DU FOOTBALL</p>
+      <h1>FOOTBALL<br><span>QUIZ</span></h1>
+      <p class="intro">Teste tes connaissances sur les joueurs, les clubs, les règles, les stades et les grandes compétitions.</p>
+      <div class="stats">
+        <div><strong>8</strong><small>catégories</small></div>
+        <div><strong>3</strong><small>niveaux</small></div>
+        <div><strong>10</strong><small>questions / partie</small></div>
+      </div>
+      <label for="category">Choisis une catégorie</label>
+      <select id="category">
+        <option value="all">Toutes les catégories</option>
+        <option value="Joueurs">Joueurs</option>
+        <option value="Arbitrage">Arbitrage</option>
+        <option value="Règles">Règles du jeu</option>
+        <option value="Terrain">Terrain et équipement</option>
+        <option value="Stades">Stades</option>
+        <option value="Clubs">Clubs et dirigeants</option>
+        <option value="Compétitions">Compétitions</option>
+        <option value="Afrique">Football africain</option>
+      </select>
+      <label for="level">Choisis ton niveau</label>
+      <select id="level">
+        <option value="Facile">Facile</option>
+        <option value="Moyen" selected>Moyen</option>
+        <option value="Difficile">Difficile</option>
+      </select>
+      <button id="start" class="primary">COMMENCER LA PARTIE</button>
+      <p class="note">Les fonctions et données historiques sont datées lorsque l'année est importante.</p>
+    </section>
+
+    <section id="game" class="panel hidden">
+      <div class="game-head">
+        <span id="progress">Question 1/10</span>
+        <span id="timer">⏱ 20 s</span>
+      </div>
+      <div class="progress-track"><div id="progressbar"></div></div>
+      <p id="qcategory" class="eyebrow"></p>
+      <h2 id="question">Question</h2>
+      <div id="answers" class="answers"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <button id="next" class="primary hidden">QUESTION SUIVANTE</button>
+    </section>
+
+    <section id="result" class="panel hidden">
+      <div class="ball">🏆</div>
+      <p class="eyebrow">PARTIE TERMINÉE</p>
+      <h2 id="result-title">Bravo !</h2>
+      <p class="score"><strong id="score">0</strong><span>/ 10</span></p>
+      <p id="result-message"></p>
+      <button id="again" class="primary">REJOUER</button>
+      <a class="secondary-link" href="index.html">Retour à QuizFlash</a>
+    </section>
+    <footer>QuizFlash · Football Quiz</footer>
+  </main>
+  <script src="football.js"></script>
+</body>
+</html>
